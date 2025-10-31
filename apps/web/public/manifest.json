@@ -1,0 +1,69 @@
+{
+  "name": "Kavzorn - Fast, Privacy-Friendly Utilities",
+  "short_name": "Kavzorn",
+  "description": "A suite of fast, privacy-friendly utilities including clocks, image tools, and network testing.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["utilities", "productivity", "tools"],
+  "shortcuts": [
+    {
+      "name": "Digital Clock",
+      "short_name": "Clock",
+      "description": "Open digital clock",
+      "url": "https://digitalclock.kavzorn.click",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Net Speed Test",
+      "short_name": "Speed Test",
+      "description": "Test internet speed",
+      "url": "https://netfast.kavzorn.click",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Background Removal",
+      "short_name": "BG Remove",
+      "description": "Remove image backgrounds",
+      "url": "https://bg.kavzorn.click",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}
