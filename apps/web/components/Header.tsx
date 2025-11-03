@@ -3,44 +3,50 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 no-underline">
+          <Link href="/" className="flex items-center gap-2 no-underline group">
             <Image
               src="/logo.png"
               alt="Kavzorn Logo"
               width={150}
               height={40}
-              className="rounded"
+              className="rounded transition-transform group-hover:scale-105"
             />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             <Link
               href="/products"
-              className="text-slate-700 hover:text-slate-900 no-underline transition-colors"
+              className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 no-underline transition-all px-4 py-2 rounded-lg font-medium"
             >
               Products
             </Link>
             <Link
               href="/services"
-              className="text-slate-700 hover:text-slate-900 no-underline transition-colors"
+              className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 no-underline transition-all px-4 py-2 rounded-lg font-medium"
             >
               Services
             </Link>
             <Link
               href="/about"
-              className="text-slate-700 hover:text-slate-900 no-underline transition-colors"
+              className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 no-underline transition-all px-4 py-2 rounded-lg font-medium"
             >
               About
+            </Link>
+            <Link
+              href="/contact"
+              className="text-white bg-blue-600 hover:bg-blue-700 no-underline transition-all px-5 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-md ml-2"
+            >
+              Contact
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-slate-700">
+          <button className="md:hidden p-2.5 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
             <svg
               className="w-6 h-6"
               fill="none"

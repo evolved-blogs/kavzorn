@@ -107,6 +107,14 @@ export default function Footer() {
                   All Products
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-slate-400 hover:text-white no-underline transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
