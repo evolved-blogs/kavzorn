@@ -1,0 +1,28 @@
+{
+  "name": "kavzorn-infrastructure",
+  "version": "1.0.0",
+  "description": "AWS CDK infrastructure for Kavzorn apps",
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "deploy": "cdk deploy --all",
+    "deploy:web": "cdk deploy KavzornWebStack",
+    "deploy:digital-clock": "cdk deploy KavzornDigitalClockStack",
+    "deploy:analog-clock": "cdk deploy KavzornAnalogClockStack",
+    "deploy:bg": "cdk deploy KavzornBgStack",
+    "deploy:format": "cdk deploy KavzornFormatStack",
+    "deploy:resize": "cdk deploy KavzornResizeStack",
+    "deploy:netfast": "cdk deploy KavzornNetfastStack",
+    "synth": "cdk synth",
+    "diff": "cdk diff"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.100.0",
+    "constructs": "^10.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "aws-cdk": "^2.100.0"
+  }
+}
