@@ -73,7 +73,7 @@ new ExistingSiteStack(app, "KavzornAnalogClockStack", {
 // // Analog Clock App
 // new StaticSiteStack(app, "KavzornAnalogClockStack", {
 //   env,
-//   domainName: "analog.kavzorn.click",
+//   domainName: "analogclock.kavzorn.click",
 //   hostedZoneName,
 //   sourcePath: path.join(__dirname, "../../apps/analog-clock/out"),
 //   appName: "AnalogClock",

@@ -9,11 +9,12 @@ const tools = [
     icon: "🕐",
   },
   {
-    name: "Analog Clock",
-    href: "https://analog.kavzorn.click",
-    description: "Classic analog clock with smooth animations",
-    icon: "⏰",
+    title: "Analog Clock",
+    description: "Classic analog clock with beautiful design.",
+    icon: "🕐",
+    href: "https://analogclock.kavzorn.click",
   },
+  {
   {
     name: "Net Speed Test",
     href: "https://netfast.kavzorn.click",

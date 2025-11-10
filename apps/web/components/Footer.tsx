@@ -38,8 +38,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://analog.kavzorn.click"
-                  className="text-slate-400 hover:text-white no-underline transition-colors"
+                  href="https://analogclock.kavzorn.click"
+                  className="text-slate-400 hover:text-white transition-colors duration-200"
                 >
                   Analog Clock
                 </a>

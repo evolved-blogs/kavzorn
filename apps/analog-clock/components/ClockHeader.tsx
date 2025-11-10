@@ -39,7 +39,7 @@ export default function ClockHeader({ currentApp }: ClockHeaderProps) {
               Digital Clock
             </Link>
             <Link
-              href="https://analog.kavzorn.click"
+              href="https://analogclock.kavzorn.click"
               className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 no-underline transition-all px-4 py-2 rounded-lg font-medium"
             >
               Analog Clock

@@ -57,12 +57,12 @@
     <priority>0.8</priority>
   </url>
 
+    </url>
+  
   <url>
-    <loc>https://analog.kavzorn.click/</loc>
-    <lastmod>2025-10-31</lastmod>
+    <loc>https://analogclock.kavzorn.click/</loc>
+    <lastmod>2024-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <url>
     <loc>https://netfast.kavzorn.click/</loc>

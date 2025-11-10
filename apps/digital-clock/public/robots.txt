@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location  
+Sitemap: https://digitalclock.kavzorn.click/sitemap.xml
+
+# Allow all search engines to crawl this digital clock utility
+# No private areas to disallow

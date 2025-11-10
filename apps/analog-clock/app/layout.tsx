@@ -1,9 +1,25 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Analog Clock • Kavzorn",
+  metadataBase: new URL("https://analogclock.kavzorn.click"),
+  alternates: {
+    canonical: "/",
+  },
+  title: {
+    default: "Analog Clock - Kavzorn",
+    template: "%s | Kavzorn Analog Clock",
+  },
   description:
-    "Smooth analog clock with hour, minute and second hands. Minimal, offline-first, privacy-focused analog clock application.",
+    "Beautiful analog clock in your browser. Classic design with smooth animations. Perfect for time display.",
+  manifest: "/manifest.json",
+  keywords: [
+    "analog clock",
+    "clock",
+    "time",
+    "watch",
+    "classic clock",
+    "browser clock",
+  ],
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -21,11 +37,11 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://analog.kavzorn.click",
+    url: "https://analogclock.kavzorn.click",
+    siteName: "Kavzorn Analog Clock",
     title: "Analog Clock • Kavzorn",
     description:
       "Smooth analog clock with hour, minute and second hands. Minimal, offline-first, privacy-focused analog clock application.",
-    siteName: "Kavzorn Analog Clock",
   },
   twitter: {
     card: "summary_large_image",

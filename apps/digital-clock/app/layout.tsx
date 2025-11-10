@@ -4,6 +4,7 @@ export const metadata = {
   title: "Digital Clock • Kavzorn",
   description:
     "Large, high-contrast digital clock. Minimal, offline-first, privacy-focused digital clock application.",
+  manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
