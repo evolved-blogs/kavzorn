@@ -1,25 +1,18 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://analogclock.kavzorn.click"),
+  metadataBase: new URL("https://analog.kavzorn.click"),
   alternates: {
     canonical: "/",
   },
-  title: {
-    default: "Analog Clock - Kavzorn",
-    template: "%s | Kavzorn Analog Clock",
-  },
+  title: "Free Online Analog Clock – Live Time Display | Kavzorn",
   description:
-    "Beautiful analog clock in your browser. Classic design with smooth animations. Perfect for time display.",
+    "View the current time on Kavzorn's free online analog clock. Enjoy a classic clock face with live updates – no installation or signup needed.",
   manifest: "/manifest.json",
-  keywords: [
-    "analog clock",
-    "clock",
-    "time",
-    "watch",
-    "classic clock",
-    "browser clock",
-  ],
+  keywords:
+    "online analog clock, analog clock, classic clock, live time, clock face",
+  authors: [{ name: "Kavzorn Tools" }],
+  generator: "Next.js",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -34,20 +27,42 @@ export const metadata = {
       { rel: "android-chrome-512x512", url: "/android-chrome-512x512.png" },
     ],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://analogclock.kavzorn.click",
-    siteName: "Kavzorn Analog Clock",
-    title: "Analog Clock • Kavzorn",
+    url: "https://analog.kavzorn.click",
+    siteName: "Kavzorn Tools",
+    title: "Free Online Analog Clock – Live Time Display | Kavzorn",
     description:
-      "Smooth analog clock with hour, minute and second hands. Minimal, offline-first, privacy-focused analog clock application.",
+      "View the current time on Kavzorn's free online analog clock. Enjoy a classic clock face with live updates – no installation or signup needed.",
+    images: [
+      {
+        url: "https://analog.kavzorn.click/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Kavzorn Online Analog Clock with classic clock face",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Analog Clock • Kavzorn",
+    site: "@kavzorn",
+    creator: "@kavzorn",
+    title: "Free Online Analog Clock – Live Time Display | Kavzorn",
     description:
-      "Smooth analog clock with hour, minute and second hands. Minimal, offline-first, privacy-focused.",
+      "View the current time on Kavzorn's free online analog clock. Enjoy a classic clock face with live updates – no installation or signup needed.",
+    images: ["https://analog.kavzorn.click/logo.png"],
   },
 };
 
@@ -56,8 +71,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const analogClockSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Kavzorn Online Analog Clock",
+    description:
+      "A free online analog clock with a classic clock face displaying current time.",
+    applicationCategory: "ClockApplication",
+    url: "https://analog.kavzorn.click",
+    offers: {
+      "@type": "Offer",
+      price: 0,
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(analogClockSchema),
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

@@ -2,6 +2,11 @@
   "name": "@kavzorn/tailwind-config",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
-  "main": "index.ts"
+  "main": "base.js",
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  }
 }

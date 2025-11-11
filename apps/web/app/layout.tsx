@@ -1,13 +1,17 @@
 import "./globals.css";
-import "@kavzorn/ui/src/styles.css";
+import "@kavzorn/ui/styles.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Kavzorn • Fast, Privacy-Friendly Utilities",
+  title: "Free Online Tools & Utilities | Kavzorn Tools",
   description:
-    "Kavzorn enterprise tools: clocks, net speed test, background removal, image utilities and more. All free, all privacy-focused.",
+    "Access Kavzorn's free online tools – digital clock, analog clock, speed test, background remover, image resizer, and more. No signup required, 100% free.",
+  keywords:
+    "free online tools, utilities, digital clock, analog clock, speed test, background remover, image resizer, format converter",
   manifest: "/manifest.json",
+  authors: [{ name: "Kavzorn Tools" }],
+  generator: "Next.js",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -37,16 +41,30 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://kavzorn.click",
-    title: "Kavzorn • Fast, Privacy-Friendly Utilities",
+    title: "Free Online Tools & Utilities | Kavzorn Tools",
     description:
-      "A suite of fast, privacy-friendly utilities including clocks, image tools, and network testing.",
-    siteName: "Kavzorn",
+      "Access Kavzorn's free online tools – digital clock, analog clock, speed test, background remover, image resizer, and more. No signup required, 100% free.",
+    siteName: "Kavzorn Tools",
+    images: [
+      {
+        url: "https://kavzorn.click/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Kavzorn Free Online Tools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kavzorn • Fast, Privacy-Friendly Utilities",
+    site: "@kavzorn",
+    creator: "@kavzorn",
+    title: "Free Online Tools & Utilities | Kavzorn Tools",
     description:
-      "A suite of fast, privacy-friendly utilities including clocks, image tools, and network testing.",
+      "Access Kavzorn's free online tools – digital clock, analog clock, speed test, background remover, image resizer, and more. No signup required, 100% free.",
+    images: ["https://kavzorn.click/logo.png"],
+  },
+  alternates: {
+    canonical: "https://kavzorn.click",
   },
 };
 
@@ -55,8 +73,40 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "WebSite"],
+    name: "Kavzorn Tools",
+    description:
+      "Suite of free online utilities including clock, speed test, and image editors.",
+    url: "https://kavzorn.click",
+    logo: "https://kavzorn.click/logo.png",
+    sameAs: ["https://twitter.com/kavzorn"],
+    offers: {
+      "@type": "Offer",
+      price: 0,
+      priceCurrency: "USD",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://kavzorn.click/search?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className="font-sans antialiased text-slate-900 flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">{children}</main>

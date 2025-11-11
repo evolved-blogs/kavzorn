@@ -1,20 +1,27 @@
-# robots.txt for Kavzorn
-# Allow all search engines to crawl the site
+# robots.txt for Kavzorn Tools
+# Allow all search engines to crawl our free online tools
 
 User-agent: *
 Allow: /
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /api/
-
-# Sitemap location
+# Sitemaps for all our free tools
 Sitemap: https://kavzorn.click/sitemap.xml
+Sitemap: https://digitalclock.kavzorn.click/sitemap.xml
+Sitemap: https://analog.kavzorn.click/sitemap.xml
+Sitemap: https://netfast.kavzorn.click/sitemap.xml
+Sitemap: https://bg.kavzorn.click/sitemap.xml
+Sitemap: https://resize.kavzorn.click/sitemap.xml
+Sitemap: https://format.kavzorn.click/sitemap.xml
 
-# Crawl-delay (optional, adjust based on server capacity)
-# Crawl-delay: 1
+# Block unnecessary paths for better crawl budget
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
 
-# Specific rules for common bots
+# Crawl-delay for optimal performance
+Crawl-delay: 1
+
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
 

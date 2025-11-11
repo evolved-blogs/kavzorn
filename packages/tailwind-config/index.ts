@@ -26,4 +26,5 @@ const preset: Partial<Config> = {
   plugins: [],
 };
 
-export default preset;
+// Export the base Tailwind configuration for apps to extend
+export default require("./base.js");

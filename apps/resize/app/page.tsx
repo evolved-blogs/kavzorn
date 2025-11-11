@@ -1,55 +1,63 @@
 import AppHeader from "../components/AppHeader";
+import ImageResize from "../components/ImageResize";
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
-      <AppHeader currentApp="resize" />
+      <AppHeader />
 
-      <main className="flex-1 flex items-center justify-center px-4 py-12">
-        <div className="max-w-4xl w-full">
-          <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 sm:p-12 text-center">
-            <div className="text-6xl mb-6">📐</div>
+      <main className="flex-1 px-4 py-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-slate-900 mb-4">
-              Image Resize
+              Image Resizer Online
             </h1>
-            <p className="text-lg text-slate-600 mb-8">
-              Resize images to any dimension while maintaining quality. Perfect
-              for web optimization, social media, and more. All processing
-              happens locally.
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Resize and scale images quickly with Kavzorn's free online image
+              resizer. Upload a photo, set new dimensions or percentage, and
+              download the resized image instantly. Perfect for web
+              optimization, social media, and professional use. All processing
+              happens locally in your browser.
             </p>
-            <div className="inline-block bg-blue-50 border border-blue-200 rounded-lg px-6 py-3">
-              <p className="text-blue-800 font-medium">🚧 Coming Soon</p>
-              <p className="text-sm text-blue-600 mt-1">
-                We're working hard to bring you this feature!
-              </p>
-            </div>
           </div>
 
-          {/* Feature Preview */}
-          <div className="mt-8 grid sm:grid-cols-3 gap-4">
-            <div className="bg-white rounded-lg p-4 border border-slate-200 text-center">
-              <div className="text-2xl mb-2">🎯</div>
-              <h3 className="font-semibold text-slate-900 mb-1">
-                Custom Dimensions
-              </h3>
-              <p className="text-sm text-slate-600">
-                Resize to exact specifications
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-4 border border-slate-200 text-center">
-              <div className="text-2xl mb-2">🖼️</div>
-              <h3 className="font-semibold text-slate-900 mb-1">
-                Aspect Ratio
-              </h3>
-              <p className="text-sm text-slate-600">Maintain or crop to fit</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 border border-slate-200 text-center">
-              <div className="text-2xl mb-2">✨</div>
-              <h3 className="font-semibold text-slate-900 mb-1">
-                High Quality
-              </h3>
-              <p className="text-sm text-slate-600">Preserve image details</p>
-            </div>
+          <ImageResize />
+
+          {/* SEO Content Section */}
+          <div className="mt-12 max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              How to Use Our Online Image Resizer
+            </h2>
+            <p className="text-slate-600 mb-6">
+              Our image resizer online tool makes it easy to change image
+              dimensions. Simply upload your photo, enter the desired width and
+              height in pixels or choose a percentage to scale, then download
+              your resized image. The tool maintains image quality while
+              optimizing file size for faster loading.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Perfect for Every Use Case
+            </h2>
+            <p className="text-slate-600 mb-6">
+              Whether you need to resize image files for social media posts,
+              website optimization, or email attachments, our photo resizer
+              handles it all. Resize images for Instagram (1080x1080), Facebook
+              covers (820x312), website thumbnails, or any custom dimensions.
+              The resized images download instantly in the same format as your
+              original.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+              Privacy-Focused Image Processing
+            </h2>
+            <p className="text-slate-600">
+              Unlike other online image resizers, all processing happens
+              directly in your browser. Your photos never leave your device,
+              ensuring complete privacy and security. Our image resizer online
+              works with JPG, PNG, GIF, and other common formats, delivering
+              professional results without compromising your data privacy.
+            </p>
           </div>
         </div>
       </main>

@@ -37,28 +37,28 @@ fi
 # Deploy all stacks
 if [ "$1" == "--all" ] || [ -z "$1" ]; then
     echo -e "${BLUE}Deploying all stacks...${NC}"
-    npm run deploy
+    AWS_PROFILE=kavzorn npm run deploy
 elif [ "$1" == "--web" ]; then
     echo -e "${BLUE}Deploying web app...${NC}"
-    npm run deploy:web
+    AWS_PROFILE=kavzorn npm run deploy:web
 elif [ "$1" == "--digital-clock" ]; then
     echo -e "${BLUE}Deploying digital clock...${NC}"
-    npm run deploy:digital-clock
+    AWS_PROFILE=kavzorn npm run deploy:digital-clock
 elif [ "$1" == "--analog-clock" ]; then
     echo -e "${BLUE}Deploying analog clock...${NC}"
-    npm run deploy:analog-clock
+    AWS_PROFILE=kavzorn npm run deploy:analog-clock
 elif [ "$1" == "--bg" ]; then
     echo -e "${BLUE}Deploying background removal...${NC}"
-    npm run deploy:bg
+    AWS_PROFILE=kavzorn npm run deploy:bg
 elif [ "$1" == "--format" ]; then
     echo -e "${BLUE}Deploying format changer...${NC}"
-    npm run deploy:format
+    AWS_PROFILE=kavzorn npm run deploy:format
 elif [ "$1" == "--resize" ]; then
     echo -e "${BLUE}Deploying image resize...${NC}"
-    npm run deploy:resize
+    AWS_PROFILE=kavzorn npm run deploy:resize
 elif [ "$1" == "--netfast" ]; then
     echo -e "${BLUE}Deploying speed test...${NC}"
-    npm run deploy:netfast
+    AWS_PROFILE=kavzorn npm run deploy:netfast
 else
     echo -e "${RED}Unknown option: $1${NC}"
     echo "Usage: ./deploy.sh [--all|--web|--digital-clock|--analog-clock|--bg|--format|--resize|--netfast]"
